@@ -1,0 +1,19 @@
+<!-- Topbar -->
+<nav class="shadow topbar topbar-expand-md topbar-sticky" id="section-top">
+  <div class="container">
+    <div class="topbar-left">
+      <a class="topbar-brand" [routerLink]="['bnb']">
+        <!-- <img class="logo-inverse" src="assets/img/logo.svg" width="136px" alt="logo"> -->
+        <img class="logo-default" src="../../assets/images/mainnet.svg"  width="auto" height="36px" alt="logo">
+      </a>
+    </div>
+    <div class="topbar-right" id="top-nav">
+      <ul class="nav">
+        <li class="nav-item mr-20"><a class="nav-link" id="bnb-link" [routerLink]="['bnb']">BNB</a></li>
+        <li class="nav-item mr-20"><a class="nav-link" id="mainnet-link" [routerLink]="['mainnet']">MAINNET</a></li>
+        <li class="nav-item mr-20"><a class="nav-link" class="nav-link" id="testnet-link" [routerLink]="['testnet']">TESTNET</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- END Topbar -->

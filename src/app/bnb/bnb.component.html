@@ -1,0 +1,59 @@
+<!-- <header>
+  <div class="row text-left" style="margin-left:10px">
+    <div class="col" style="margin-top:10px">
+      <img src="../../assets/images/mainnet.svg" width="200" height="auto">
+    </div>
+  </div>
+</header> -->
+
+<main class="main-content">
+  <section>
+
+  <div class="container mx-20 mt-80">
+    <!-- <h1 style="text-align:left">Binance Coin</h1> -->
+    <br>
+
+    <div class="shadow p-3 mb-5 bg-white rounded mx-20">
+      <h2 style="text-align:left">Binance Coin (BNB)</h2>
+      <hr>
+      <div class="row text-left">
+         <div class="col-md-6">
+          <strong>Rank & Market Cap</strong>
+          <br>
+          <p class="bnb-orng"><span style="font-size:2rem">{{bnbData.rank}}</span><span> / 2200 coins</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">$ {{(bnbData.market_cap_usd) | number:'0.2-3'}}</span><span> USD</span></p>
+        </div>
+        <div class="col-md-6">
+          <strong>Price</strong>
+          <br>
+          <p class="bnb-orng"><span style="font-size:2rem">$ {{(bnbData.price_usd) | number:'0.2-3'}}</span><span> USD</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">{{(bnbData.price_btc) | number:'0.2-5'}}</span><span> BTC</span></p>
+          <p class="bnb-grey"><span style="font-size:1rem">{{(bnbData.price_btc * 100000000) | number:'0.2-5'}}</span><span> sats</span></p>
+        </div>
+      </div>
+
+      <div class="row text-left">
+        <div class="col-md-6">
+          <strong>24hr Volume</strong>
+          <br>
+          <!-- <p class="bnb-orng"><span style="font-size:2rem">$ {{ (bnbData.24h_volume_usd) | number:'0.2'}}</span><span> USD</span></p> -->
+          <p class="bnb-orng"><span style="font-size:2rem">$ {{ volume | number:'0.2'}}</span><span> USD</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">{{ volume/bnbData.price_usd | number:'0.2'}}</span><span> BNB</span></p>
+
+        </div>
+
+        <div class="col-md-6">
+          <strong>Supply</strong>
+          <br>
+          <p class="bnb-orng"><span style="font-size:2rem">{{bnbData.available_supply | number:'0.2'}}</span><span> BNB</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">{{bnbData.total_supply | number:'0.2'}}</span><span> BNB</span></p>
+        </div>
+      </div>
+      </div>
+
+
+    </div>
+    <br>
+
+  </section>
+</main>
