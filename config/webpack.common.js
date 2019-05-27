@@ -56,6 +56,10 @@ module.exports = {
       {} // a map of your routes
     ),
 
+    new HtmlWebpackPlugin({
+        favicon: 'src/favicon.ico'
+        }),
+
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),

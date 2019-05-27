@@ -17,8 +17,10 @@ export class FeenodeService {
 
     cmcApi = 'https://api.coinmarketcap.com/v1/ticker/binance-coin/';
     cmcResp = '[{"id": "binance-coin","name": "Binance Coin","symbol": "BNB","rank": "7","price_usd": "33.7137224691","price_btc": "0.00422775","24h_volume_usd": "645554815.169","market_cap_usd": "4759551297.0","available_supply": "141175490.0","total_supply": "189175490.0","max_supply": null,"percent_change_1h": "0.07","percent_change_24h": "-1.1","percent_change_7d": "16.88", "last_updated": "1558855144" }]';
+    cmcApiAll = 'https://api.coinmarketcap.com/v1/global-metrics/quotes/latest';
 
     public bnbData;
+    public numCrypto;
 
     public submit_proposal;
     public deposit;
@@ -42,6 +44,7 @@ export class FeenodeService {
 
     this.getFees();
     this.getPrice();
+    // this.getNum();
     // console.log(this.fixed_fee_params);
     // console.log(this.fixed_fee_params.fixed_fee_params.fee);
     // console.log(this.vote.fee);
@@ -122,11 +125,21 @@ getPrice(){
   console.log(this.cmcApi);
   const result = this.getJSON(this.cmcApi);
   console.log(result);
-  const res = JSON.parse(this.cmcResp.toString());
+  const res = JSON.parse(result.toString());
   // console.log('result', res);
   this.bnbData = res[0];
   // console.log('price', this.bnbPrice);
 }
+
+// getNum(){
+//   console.log(this.cmcApi);
+//   const result = this.getJSON(this.cmcApiAll);
+//   console.log(result);
+//   const res = JSON.parse(result.toString());
+//   // console.log('result', res);
+//   this.numCrypto = res[0].active_cryptocurrencies;
+//    console.log('num', this.numCrypto);
+// }
 
 
 /** JSON Parser */

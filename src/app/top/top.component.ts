@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FeenodeService } from '../feenode.service';
 
+import '../../assets/css/styles.css';
+
 @Component({
   selector: 'app-top',
   templateUrl: './top.component.html',

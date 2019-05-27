@@ -1,0 +1,22 @@
+.topper{
+position:fixed;
+z-index:10;
+top:0px;
+background-color:#fff;
+width:100%;
+}
+
+.nav-btn{
+  color:#323c47;
+  text-align: right !important;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+  float: right;
+  margin-right: 20px;
+}
+
+.nav-btn:hover, .nav-btn:focus {
+  color:#eeb00f;
+  text-decoration: none;
+  outline: none;
+}

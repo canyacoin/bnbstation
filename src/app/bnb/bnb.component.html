@@ -20,13 +20,13 @@
          <div class="col-md-6">
           <strong>Rank & Market Cap</strong>
           <br>
-          <p class="bnb-orng"><span style="font-size:2rem">{{bnbData.rank}}</span><span> / 2200 coins</span></p>
-          <p class="bnb-grey"><span style="font-size:2rem">$ {{(bnbData.market_cap_usd) | number:'0.2-3'}}</span><span> USD</span></p>
+          <p class="bnb-orng"><span style="font-size:2rem">{{bnbData.rank}}</span><span> / 2209 coins</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">$ {{(bnbData.market_cap_usd)/1000000000 | number:'0.1-2'}}bn</span><span> USD</span></p>
         </div>
         <div class="col-md-6">
           <strong>Price</strong>
           <br>
-          <p class="bnb-orng"><span style="font-size:2rem">$ {{(bnbData.price_usd) | number:'0.2-3'}}</span><span> USD</span></p>
+          <p class="bnb-orng"><span style="font-size:2rem">$ {{(bnbData.price_usd) | number:'0.1-2'}}</span><span> USD</span></p>
           <p class="bnb-grey"><span style="font-size:2rem">{{(bnbData.price_btc) | number:'0.2-5'}}</span><span> BTC</span></p>
           <p class="bnb-grey"><span style="font-size:1rem">{{(bnbData.price_btc * 100000000) | number:'0.2-5'}}</span><span> sats</span></p>
         </div>
@@ -37,16 +37,18 @@
           <strong>24hr Volume</strong>
           <br>
           <!-- <p class="bnb-orng"><span style="font-size:2rem">$ {{ (bnbData.24h_volume_usd) | number:'0.2'}}</span><span> USD</span></p> -->
-          <p class="bnb-orng"><span style="font-size:2rem">$ {{ volume | number:'0.2'}}</span><span> USD</span></p>
-          <p class="bnb-grey"><span style="font-size:2rem">{{ volume/bnbData.price_usd | number:'0.2'}}</span><span> BNB</span></p>
+          <p class="bnb-orng"><span style="font-size:2rem">$ {{ (volume/1000000) | number:'0.1-2'}}mn</span><span> USD</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">{{ ((volume/bnbData.price_usd)/1000000) | number:'0.1-2'}}mn</span><span> BNB</span></p>
 
         </div>
 
         <div class="col-md-6">
           <strong>Supply</strong>
           <br>
-          <p class="bnb-orng"><span style="font-size:2rem">{{bnbData.available_supply | number:'0.2'}}</span><span> BNB</span></p>
-          <p class="bnb-grey"><span style="font-size:2rem">{{bnbData.total_supply | number:'0.2'}}</span><span> BNB</span></p>
+          <p class="bnb-orng"><span style="font-size:2rem">{{bnbData.available_supply | number:'0.0'}}</span><span> BNB</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">{{bnbData.total_supply | number:'0.0'}}</span><span> BNB</span></p>
+          <p class="bnb-grey"><span style="font-size:1rem">{{(bnbData.available_supply/bnbData.total_supply)*100 | number:'0.0-0'}}% Released</span></p>
+
         </div>
       </div>
       </div>
