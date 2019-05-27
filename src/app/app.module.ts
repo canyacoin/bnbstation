@@ -15,9 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { TopComponent } from './top/top.component';
-import { TestnetComponent } from './testnet/testnet.component';
 import { BnbComponent } from './bnb/bnb.component';
 import { FooterComponent } from './footer/footer.component';
+// import { ChainComponent } from './chain/chain.component';
 
 
 @NgModule({
@@ -34,7 +34,6 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     MainnetComponent,
     TopComponent,
-    TestnetComponent,
     BnbComponent,
     FooterComponent
   ],

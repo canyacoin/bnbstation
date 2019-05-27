@@ -10,7 +10,16 @@
   <section>
 
   <div class="container mx-20">
-    <h1 style="text-align:left">Binance Mainnet Fees</h1>
+    <div class="row">
+      <div class="col-8">
+            <h1 style="text-align:left">Binance {{title}} Fees</h1>
+      </div>
+      <div class="col-4 text-right" style="vertical-align:middle">
+        <button type="button" class="btn btn-warning text-center" name="button" (click)="switchNet()">Switch to {{notTitle}}</button>
+      </div>
+
+    </div>
+
     <br>
 
     <div class="shadow p-3 mb-5 bg-white rounded mx-20">
@@ -94,6 +103,7 @@
             <p class="bnb-grey"><span style="font-size:2rem">${{(iocExpireFeeNative.fee_value / 100000000) | number:'0.2-2'}}</span><span> USD</span></p>
           </div>
         </div>
+        <br>
         <div class="row text-left">
         <div class="col-md-3 col-sm-6">
           <strong>Fee Rate</strong>
@@ -152,6 +162,7 @@
             <p class="bnb-grey"><span style="font-size:2rem">${{(bnbPrice)*(tokensFreeze.fee / 100000000) | number:'0.2-2'}}</span><span> USD</span></p>
           </div>
         </div>
+        <br>
         <div class="row text-left">
           <div class="col-md-4 col-sm-6">
             <strong>List on BinanceDEX</strong>

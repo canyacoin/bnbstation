@@ -1,0 +1,61 @@
+
+<main class="main-content">
+  <section>
+
+  <div class="container mx-20 mt-80">
+    <!-- <h1 style="text-align:left">Binance Coin</h1> -->
+    <br>
+
+    <div class="shadow p-3 mb-5 bg-white rounded mx-20">
+      <h2 style="text-align:left">Binance Chain</h2>
+      <hr>
+      <div class="row text-left">
+         <div class="col-md-6">
+          <strong>Blockchain</strong>
+          <br>
+          <p class="bnb-orng"><span style="font-size:2rem">{{bncVal.block_height | number:'0.0'}}</span><span> block height</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">{{bncTime.block_time | date: "hh:mm:ss "}}</span><span>{{bncTime.block_time | date: "a z"}}</span></p>
+          <p class="bnb-grey"><span style="font-size:1.5rem">{{bncTime.block_time | date: "dd MMM yyyy"}}</span><span> block time</span></p>
+
+        </div>
+        <div class="col-md-6">
+          <strong>Performance</strong>
+          <br>
+          <p class="bnb-orng"><span style="font-size:2rem">{{(bps) | number:'0.1-2'}}</span><span> ms per block</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">{{(1 / (bps/1000)) | number:'0.1-2'}}</span><span> blocks per second</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">{{ (bncVal.validators.length) | number:'0.0'}}</span><span> validators</span></p>
+          <!-- <p class="bnb-grey"><span style="font-size:2rem">{{(bncData.price_btc) | number:'0.2-5'}}</span><span> BTC</span></p>
+          <p class="bnb-grey"><span style="font-size:1rem">{{(bnbData.price_btc * 100000000) | number:'0.2-5'}}</span><span> sats</span></p> -->
+
+        </div>
+      </div>
+
+      <div class="row text-left">
+        <div class="col-md-6">
+          <!-- <strong>Validators</strong>
+          <br>
+          <p class="bnb-orng"><span style="font-size:2rem">{{ (bncVal.validators.length) | number:'0.0'}}</span><span> validators</span></p> -->
+
+          <!-- <p class="bnb-orng"><span style="font-size:2rem">$ {{ (volume/1000000) | number:'0.1-2'}}mn</span><span> USD</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">{{ ((volume/bnbData.price_usd)/1000000) | number:'0.1-2'}}mn</span><span> BNB</span></p>
+
+        </div>
+
+        <div class="col-md-6">
+          <strong>Supply</strong>
+          <br>
+          <!-- <p class="bnb-orng"><span style="font-size:2rem">{{bnbData.available_supply | number:'0.0'}}</span><span> BNB</span></p>
+          <p class="bnb-grey"><span style="font-size:2rem">{{bnbData.total_supply | number:'0.0'}}</span><span> BNB</span></p>
+          <p class="bnb-grey"><span style="font-size:1rem">{{(bnbData.available_supply/bnbData.total_supply)*100 | number:'0.0-0'}}% Released</span></p> -->
+
+        </div>
+      </div>
+
+      </div>
+
+
+    </div>
+    <br>
+
+  </section>
+</main>

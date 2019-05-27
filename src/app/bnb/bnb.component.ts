@@ -11,6 +11,12 @@ export class BnbComponent implements OnInit {
   public bnbData;
   public volume;
 
+  public bncData;
+  public bncTime;
+  public bncVal;
+  public bps;
+  public numVal;
+
   constructor(private feenodeservice: FeenodeService) {
 
    }
@@ -19,6 +25,12 @@ export class BnbComponent implements OnInit {
 
     this.bnbData = this.feenodeservice.bnbData;
     this.volume = +this.getValues(this.bnbData, '24h_volume_usd');
+
+    this.bncData = this.feenodeservice.bncData;
+    this.bncTime = this.feenodeservice.bncTime;
+    this.bncVal = this.feenodeservice.bncVal;
+    this.dateDiff();
+    this.countVal();
 
   }
 
@@ -33,6 +45,20 @@ export class BnbComponent implements OnInit {
         }
     }
     return objects;
+}
+
+dateDiff(): number {
+  let dateGen = new Date(this.feenodeservice.genesis);
+  let dateNow = new Date(this.bncTime.block_time);
+  var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+  var diffSeconds = Math.round(Math.abs((dateNow.getTime() - dateGen.getTime())));
+  this.bps = diffSeconds / this.bncVal.block_height;
+  return this.bps;
+}
+
+countVal(){
+  const valArray = this.bncVal.validators.length;
+  console.log(valArray);
 }
 
 }

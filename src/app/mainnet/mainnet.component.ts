@@ -12,6 +12,9 @@ import '../../assets/css/styles.css';
 export class MainnetComponent implements OnInit {
 
   public bnbPrice;
+  public mainnet: boolean = true;
+  public title: string = 'Mainnet';
+  public notTitle: string = 'Testnet';
 
   public submit_proposal;
   public deposit;
@@ -45,7 +48,10 @@ export class MainnetComponent implements OnInit {
 
     this.feenodeservice.mainnet = true;
     this.feenodeservice.getFees();
+    this.setParams();
+  }
 
+    setParams(){
     this.submit_proposal = this.feenodeservice.submit_proposal;
     this.deposit = this.feenodeservice.deposit;
     this.vote = this.feenodeservice.vote;
@@ -63,7 +69,7 @@ export class MainnetComponent implements OnInit {
 
     this.bnbPrice = this.feenodeservice.bnbData.price_usd;
 
-    console.log(this.dex_fee_fields[4].fee_value);
+    // console.log(this.dex_fee_fields[4].fee_value);
 
     this.expireFee = this.dex_fee_fields[0];
     this.expireFeeNative = this.dex_fee_fields[1];
@@ -74,15 +80,29 @@ export class MainnetComponent implements OnInit {
     this.iocExpireFee = this.dex_fee_fields[6];
     this.iocExpireFeeNative = this.dex_fee_fields[7];
 
-    console.log(this.feeRate);
-    console.log(this.feeRate.fee_value);
-
-
+    // console.log(this.feeRate);
+    // console.log(this.feeRate.fee_value);
   }
 
   convertToLocaleString(variable) {
   const withCommas = parseFloat(variable).toFixed(2);
   return withCommas.replace(/\d(?=(\d{3})+\.)/g, '$&,');
+  }
+
+  switchNet(){
+    if(this.feenodeservice.mainnet){
+      this.feenodeservice.mainnet = false;
+      this.feenodeservice.getFees();
+      this.setParams();
+      this.title = 'Testnet';
+      this.notTitle = 'Mainnet';
+    } else {
+      this.feenodeservice.mainnet = true;
+      this.feenodeservice.getFees();
+      this.setParams();
+      this.title = 'Mainnet';
+      this.notTitle = 'Testnet';
+    }
   }
 
 
