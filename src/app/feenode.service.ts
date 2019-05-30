@@ -174,18 +174,18 @@ getJSON(url) {
 getTime(){
   const result = this.getJSON(this.timeApi);
   if  (result == 'API rate limit exceeded'){
-    this.bncTime = JSON.parse(result.toString());
-  } else {
     this.bncTime = JSON.parse(this.timeResp.toString());
+  } else {
+    this.bncTime = JSON.parse(result.toString());
   }
 }
 
 getVal(){
   const result = this.getJSON(this.validatorApi);
   if  (result == 'API rate limit exceeded'){
-    this.bncVal = JSON.parse(result.toString());
-  } else {
     this.bncVal = JSON.parse(this.valResp.toString());
+  } else {
+    this.bncVal = JSON.parse(result.toString());
   }
   console.log(this.bncVal);
 }
