@@ -2,7 +2,7 @@
 
 This repo is mirrored from the Gitlab primary repository:
 
-https://gitlab.com/canyacoin/binancechain-resources/bnbstation
+https://gitlab.com/canyacoin/binancechain/bnbstation
 
 
 ## Overview
