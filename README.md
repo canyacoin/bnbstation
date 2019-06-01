@@ -1,27 +1,24 @@
 # BNBStation
 
+This repo is mirrored from the Gitlab primary repository:
+
+https://gitlab.com/canyacoin/binancechain-resources/bnbstation
+
+
 ## Overview
 
 Binance Fee Station https://bnbstation.info
 
 Built with Angular and Webpack, hosted on Firebase.
 
-Fees are pulled in realtime:
+**Fees are pulled in realtime**
 
-Mainnet
-```
-https://dex.binance.org/api/v1/fees
-```
+Mainnet: https://dex.binance.org/api/v1/fees
 
-Testnet
-```
-https://testnet-dex.binance.org/api/v1/fees
-```
+Testnet: https://testnet-dex.binance.org/api/v1/fees
 
-Prices
-```
-https://api.coinmarketcap.com/v1/ticker/binance-coin/
-```
+Prices: https://api.coinmarketcap.com/v1/ticker/binance-coin/
+
 
 API results are cached in the page as a backup to prevent DOS'ing the validators
 
