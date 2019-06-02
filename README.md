@@ -1,9 +1,12 @@
+****
+
+> **Mirror**
+> This repo mirrors from Gitlab to Github. Please commit to the Gitlab repo:
+> https://gitlab.com/canyacoin/binancechain/bnbstation
+
+****
+
 # BNBStation
-
-This repo is mirrored from the Gitlab primary repository:
-
-https://gitlab.com/canyacoin/binancechain/bnbstation
-
 
 ## Overview
 
